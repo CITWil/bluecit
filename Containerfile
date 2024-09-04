@@ -55,7 +55,6 @@ RUN mkdir -p /etc/yum.repos.d/ && \
 
 RUN mkdir -p /var/lib/alternatives && \
     /tmp/build.sh && \
-     /etc/yum.repos.d/ && \
     ostree container commit
 ## NOTES:
 # - /var/lib/alternatives is required to prevent failure with some RPM installs
