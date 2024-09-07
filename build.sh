@@ -24,7 +24,7 @@ curl -fsSL https://rpm.librewolf.net/librewolf-repo.repo | pkexec tee /etc/yum.r
 
 # this installs a package from fedora repos
 # rpm-ostree install screen
-rpm-ostree install librewolf
+#rpm-ostree install librewolf
 #rpm-ostree install microsoft-edge-stable
 #rpm-ostree install cosmic-desktop
 
