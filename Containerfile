@@ -50,8 +50,8 @@ FROM ghcr.io/ublue-os/${SOURCE_IMAGE}${SOURCE_SUFFIX}:${SOURCE_TAG}
 
 COPY build.sh /tmp/build.sh
 
-RUN mkdir -p /etc/yum.repos.d/ && \
-    ostree container commit
+#RUN mkdir -p /etc/yum.repos.d/ && \
+#   ostree container commit
 
 RUN mkdir -p /var/lib/alternatives && \
     /tmp/build.sh && \
