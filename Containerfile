@@ -41,8 +41,8 @@ ARG SOURCE_TAG="latest"
 
 ### 2. SOURCE IMAGE
 ## this is a standard Containerfile FROM using the build ARGs above to select the right upstream image
-FROM ghcr.io/ublue-os/${SOURCE_IMAGE}${SOURCE_SUFFIX}:${SOURCE_TAG}
-
+# FROM ghcr.io/ublue-os/${SOURCE_IMAGE}${SOURCE_SUFFIX}:${SOURCE_TAG}
+FROM ghcr.io/citwil/cit-os:latest
 
 ### 3. MODIFICATIONS
 ## make modifications desired in your image and install packages by modifying the build.sh script
@@ -50,7 +50,7 @@ FROM ghcr.io/ublue-os/${SOURCE_IMAGE}${SOURCE_SUFFIX}:${SOURCE_TAG}
 
 COPY build.sh /tmp/build.sh
 
-RUN mkdir -p /etc/yum.repos.d/ && \
+# RUN mkdir -p /etc/yum.repos.d/ && \
     ostree container commit
 
 RUN mkdir -p /var/lib/alternatives && \
